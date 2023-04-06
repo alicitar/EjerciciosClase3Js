@@ -15,4 +15,8 @@ const personajesSimpsons = [
 const personajesMenores = personajesSimpsons.filter ((personaje) => personaje.edad < 18);
 //console.log(personajesMenores)
 
-
+// Ejercicio 2
+function sumarEdades(lista) {
+    return lista.reduce((acu, personaje) => acu + personaje["edad"], 0);
+}
+const sumaEdades = sumarEdades(personajesMenores)
