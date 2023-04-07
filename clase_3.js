@@ -20,3 +20,25 @@ function sumarEdades(lista) {
     return lista.reduce((acu, personaje) => acu + personaje["edad"], 0);
 }
 const sumaEdades = sumarEdades(personajesMenores)
+
+// Ejercicio 3
+const nombresPersonajes = personajesSimpsons.map(personaje => personaje["nombre"]);
+
+// Ejercicio 4
+const cambiarRol = personajesSimpsons.map(({nombre, edad, rol}) => {
+    if(edad < 18) {
+      return {nombre, edad, rol: "Estudiante"};
+    } else {
+      return {nombre, edad, rol};
+    }
+  });
+
+
+// Ejercicio 5
+const personajesSimpsons2 = [
+    { nombre: "Apu", edad: 36, rol: "Dueño de Kwik-E-Mart" },
+    { nombre: "Krusty", edad: 54, rol: "Payaso" },
+    { nombre: "Montgomery Burns", edad: 104, rol: "Jefe de la planta nuclear" }
+];
+
+const PersonajesUnidos = [...personajesSimpsons, ...personajesSimpsons2];
